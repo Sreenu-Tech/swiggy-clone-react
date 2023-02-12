@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# Component
+Component is a UI building block
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Console.log
+this will print the data in browser console
 
-## Available Scripts
+# State
+To store the internal value of a component, we use the cocept called state
+# Hooks
+## useState
+this hooks/function store the state of the component
 
-In the project directory, you can run:
+# Props
+Props is used to pass the argument to the component
 
-### `npm start`
+# Local Storage
+1. This will store the data in browser memory, we can tertive the data any time using window.localStorage object
+2. There is no lifetime for the loca storage, it will remain the data, if we close the browser also
+3.  The data will store in format for key value pair
+4. Key value pair data type is string
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Session Storage
+This is same as `Local Storage`, but only difference is the data will dispose/vanish/delete when we close the tab/browser
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to store item in Local Storage
+`window.localStorage.setItem('selected_location',JSON.stringify(item))`
+1. `window.localStorage` : access the localStorage in react/javascript
+2. `setItem` : is used to store the item into localStorage
+3. `('selected_location',JSON.stringify(item))`:
+    1. `selected_location`:  key of the localStorage
+    2. `JSON.stringify(item)` :  value of the localStorage
 
-### `npm test`
+## JSON.stringify
+This is used to convert object to string format
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## JSON.parse
+This will convert json string to object
 
-### `npm run build`
+# useEffect
+This hooks will execute when component mount/render to the UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Mock API
+https://mockoon.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# API Call
+To get the data from external application, we requried HTTP call
+`fetch` is used call the external API/application data inside the react application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Fetch
+1. This is used to call the API inside the application
+2. Fecth is promise in nature
+3. To call any api, the API may be take some time to retrun the value
+4. After returing the value, we have 2 choice
+    1. Success data
+    2. Error data
 
-### `npm run eject`
+```
+ fetch('http://localhost:3002/restaurant/list').then(res => res.json()).then(result => {
+            console.log(result)
+        }).catch(error => {
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        })
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. `fetch('http://localhost:3002/restaurant/list')` : call the api
+2. `then` : this will call when API response is OK(200)
+3. `then(res => res.json())` : This will convert respons to JSON object
+4. `catch(error =>` : call when API return error
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Tailwind CSS
+https://tailwindcss.com/docs/guides/create-react-app
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# className
+In react to use css class name in a component, then we have to `className` props instead of `class`
+becuase `class` is keyword and , we can't use class as  props
 
-## Learn More
+# Redux
+Redux is used to manage state of the application, means redux create global state and that state we can access inside all the components.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Offical site : https://redux.js.org/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Form
+https://formik.org/ is used to do the reactive form in react js
+# HTTP
+https://axios-http.com/
+
+# Error Tracking
+https://sentry.io/
+
+
+https://swiggy-clone-sreenutech.web.app/
