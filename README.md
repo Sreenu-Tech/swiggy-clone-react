@@ -89,3 +89,7 @@ https://sentry.io/
 
 
 https://swiggy-clone-sreenutech.web.app/
+
+
+## PATH
+https://github.com/Sreenu-Tech/swiggy-clone-react
